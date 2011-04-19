@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7245080134CF34D00A6146E /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B724507D134CF34D00A6146E /* bg@2x.png */; };
+		B7245081134CF34D00A6146E /* overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B724507E134CF34D00A6146E /* overlay@2x.png */; };
+		B7355A18134D2B3100E3CCE4 /* Digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7355A17134D2B3100E3CCE4 /* Digital-7.ttf */; };
+		B7A273B6134878D70086F740 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A273B5134878D70086F740 /* UIKit.framework */; };
+		B7A273B8134878D70086F740 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A273B7134878D70086F740 /* Foundation.framework */; };
+		B7A273BA134878D70086F740 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A273B9134878D70086F740 /* CoreGraphics.framework */; };
+		B7A273C0134878D70086F740 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7A273BE134878D70086F740 /* InfoPlist.strings */; };
+		B7A273C3134878D70086F740 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A273C2134878D70086F740 /* main.m */; };
+		B7A273C6134878D80086F740 /* Dial_ExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A273C5134878D80086F740 /* Dial_ExampleAppDelegate.m */; };
+		B7A273C9134878D80086F740 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7A273C7134878D80086F740 /* MainWindow.xib */; };
+		B7A273CC134878D80086F740 /* Dial_ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A273CB134878D80086F740 /* Dial_ExampleViewController.m */; };
+		B7A273CF134878D80086F740 /* Dial_ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7A273CD134878D80086F740 /* Dial_ExampleViewController.xib */; };
+		B7A273D6134878D80086F740 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A273B5134878D70086F740 /* UIKit.framework */; };
+		B7A273D7134878D80086F740 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A273B7134878D70086F740 /* Foundation.framework */; };
+		B7A273D8134878D80086F740 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A273B9134878D70086F740 /* CoreGraphics.framework */; };
+		B7A273E0134878D80086F740 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7A273DE134878D80086F740 /* InfoPlist.strings */; };
+		B7A273E3134878D80086F740 /* Dial_ExampleTests.h in Resources */ = {isa = PBXBuildFile; fileRef = B7A273E2134878D80086F740 /* Dial_ExampleTests.h */; };
+		B7A273E5134878D80086F740 /* Dial_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A273E4134878D80086F740 /* Dial_ExampleTests.m */; };
+		B7A2740013487D0B0086F740 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A273FF13487D0B0086F740 /* Default.png */; };
+		B7A2740B13487D2B0086F740 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A2740A13487D2B0086F740 /* Default@2x.png */; };
+		B7A2740D13487D310086F740 /* Icon@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A2740C13487D300086F740 /* Icon@2x~iphone.png */; };
+		B7A2740F13487D370086F740 /* Icon~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A2740E13487D370086F740 /* Icon~iphone.png */; };
+		B7A2741913487DD70086F740 /* DialController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A2741413487DD70086F740 /* DialController.m */; };
+		B7A2741A13487DD70086F740 /* GlowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A2741613487DD70086F740 /* GlowLabel.m */; };
+		B7A2741B13487DD70086F740 /* MultiDialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A2741813487DD70086F740 /* MultiDialViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7A273D9134878D80086F740 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7A273A8134878D70086F740 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7A273B0134878D70086F740;
+			remoteInfo = "Dial Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B724507D134CF34D00A6146E /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
+		B724507E134CF34D00A6146E /* overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overlay@2x.png"; sourceTree = "<group>"; };
+		B7355A17134D2B3100E3CCE4 /* Digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Digital-7.ttf"; sourceTree = "<group>"; };
+		B7A273B1134878D70086F740 /* Dial Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dial Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A273B5134878D70086F740 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B7A273B7134878D70086F740 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B7A273B9134878D70086F740 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B7A273BD134878D70086F740 /* Dial Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dial Example-Info.plist"; sourceTree = "<group>"; };
+		B7A273BF134878D70086F740 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B7A273C1134878D70086F740 /* Dial Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dial Example-Prefix.pch"; sourceTree = "<group>"; };
+		B7A273C2134878D70086F740 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B7A273C4134878D70086F740 /* Dial_ExampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dial_ExampleAppDelegate.h; sourceTree = "<group>"; };
+		B7A273C5134878D80086F740 /* Dial_ExampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dial_ExampleAppDelegate.m; sourceTree = "<group>"; };
+		B7A273C8134878D80086F740 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B7A273CA134878D80086F740 /* Dial_ExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dial_ExampleViewController.h; sourceTree = "<group>"; };
+		B7A273CB134878D80086F740 /* Dial_ExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dial_ExampleViewController.m; sourceTree = "<group>"; };
+		B7A273CE134878D80086F740 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Dial_ExampleViewController.xib; sourceTree = "<group>"; };
+		B7A273D5134878D80086F740 /* Dial ExampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dial ExampleTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A273DD134878D80086F740 /* Dial ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dial ExampleTests-Info.plist"; sourceTree = "<group>"; };
+		B7A273DF134878D80086F740 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B7A273E1134878D80086F740 /* Dial ExampleTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dial ExampleTests-Prefix.pch"; sourceTree = "<group>"; };
+		B7A273E2134878D80086F740 /* Dial_ExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dial_ExampleTests.h; sourceTree = "<group>"; };
+		B7A273E4134878D80086F740 /* Dial_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dial_ExampleTests.m; sourceTree = "<group>"; };
+		B7A273FF13487D0B0086F740 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B7A2740A13487D2B0086F740 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B7A2740C13487D300086F740 /* Icon@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x~iphone.png"; sourceTree = "<group>"; };
+		B7A2740E13487D370086F740 /* Icon~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~iphone.png"; sourceTree = "<group>"; };
+		B7A2741313487DD70086F740 /* DialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialController.h; path = ../../../DialController.h; sourceTree = "<group>"; };
+		B7A2741413487DD70086F740 /* DialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialController.m; path = ../../../DialController.m; sourceTree = "<group>"; };
+		B7A2741513487DD70086F740 /* GlowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlowLabel.h; path = ../../../GlowLabel.h; sourceTree = "<group>"; };
+		B7A2741613487DD70086F740 /* GlowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlowLabel.m; path = ../../../GlowLabel.m; sourceTree = "<group>"; };
+		B7A2741713487DD70086F740 /* MultiDialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiDialViewController.h; path = ../../../MultiDialViewController.h; sourceTree = "<group>"; };
+		B7A2741813487DD70086F740 /* MultiDialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiDialViewController.m; path = ../../../MultiDialViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7A273AE134878D70086F740 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A273B6134878D70086F740 /* UIKit.framework in Frameworks */,
+				B7A273B8134878D70086F740 /* Foundation.framework in Frameworks */,
+				B7A273BA134878D70086F740 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A273D1134878D80086F740 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A273D6134878D80086F740 /* UIKit.framework in Frameworks */,
+				B7A273D7134878D80086F740 /* Foundation.framework in Frameworks */,
+				B7A273D8134878D80086F740 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B724507B134CF34D00A6146E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B7355A17134D2B3100E3CCE4 /* Digital-7.ttf */,
+				B724507D134CF34D00A6146E /* bg@2x.png */,
+				B724507E134CF34D00A6146E /* overlay@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B7A273A6134878D70086F740 = {
+			isa = PBXGroup;
+			children = (
+				B724507B134CF34D00A6146E /* Resources */,
+				B7A2741113487D510086F740 /* AppAssets */,
+				B7A273BB134878D70086F740 /* Dial Example */,
+				B7A273DB134878D80086F740 /* Dial ExampleTests */,
+				B7A273B4134878D70086F740 /* Frameworks */,
+				B7A273B2134878D70086F740 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7A273B2134878D70086F740 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7A273B1134878D70086F740 /* Dial Example.app */,
+				B7A273D5134878D80086F740 /* Dial ExampleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7A273B4134878D70086F740 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7A273B5134878D70086F740 /* UIKit.framework */,
+				B7A273B7134878D70086F740 /* Foundation.framework */,
+				B7A273B9134878D70086F740 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7A273BB134878D70086F740 /* Dial Example */ = {
+			isa = PBXGroup;
+			children = (
+				B7A2741213487DC70086F740 /* Classes */,
+				B7A273C4134878D70086F740 /* Dial_ExampleAppDelegate.h */,
+				B7A273C5134878D80086F740 /* Dial_ExampleAppDelegate.m */,
+				B7A273C7134878D80086F740 /* MainWindow.xib */,
+				B7A273CA134878D80086F740 /* Dial_ExampleViewController.h */,
+				B7A273CB134878D80086F740 /* Dial_ExampleViewController.m */,
+				B7A273CD134878D80086F740 /* Dial_ExampleViewController.xib */,
+				B7A273BC134878D70086F740 /* Supporting Files */,
+			);
+			path = "Dial Example";
+			sourceTree = "<group>";
+		};
+		B7A273BC134878D70086F740 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7A273BD134878D70086F740 /* Dial Example-Info.plist */,
+				B7A273BE134878D70086F740 /* InfoPlist.strings */,
+				B7A273C1134878D70086F740 /* Dial Example-Prefix.pch */,
+				B7A273C2134878D70086F740 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7A273DB134878D80086F740 /* Dial ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7A273E2134878D80086F740 /* Dial_ExampleTests.h */,
+				B7A273E4134878D80086F740 /* Dial_ExampleTests.m */,
+				B7A273DC134878D80086F740 /* Supporting Files */,
+			);
+			path = "Dial ExampleTests";
+			sourceTree = "<group>";
+		};
+		B7A273DC134878D80086F740 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7A273DD134878D80086F740 /* Dial ExampleTests-Info.plist */,
+				B7A273DE134878D80086F740 /* InfoPlist.strings */,
+				B7A273E1134878D80086F740 /* Dial ExampleTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7A2741113487D510086F740 /* AppAssets */ = {
+			isa = PBXGroup;
+			children = (
+				B7A2740E13487D370086F740 /* Icon~iphone.png */,
+				B7A2740C13487D300086F740 /* Icon@2x~iphone.png */,
+				B7A2740A13487D2B0086F740 /* Default@2x.png */,
+				B7A273FF13487D0B0086F740 /* Default.png */,
+			);
+			name = AppAssets;
+			sourceTree = "<group>";
+		};
+		B7A2741213487DC70086F740 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B7A2741313487DD70086F740 /* DialController.h */,
+				B7A2741413487DD70086F740 /* DialController.m */,
+				B7A2741513487DD70086F740 /* GlowLabel.h */,
+				B7A2741613487DD70086F740 /* GlowLabel.m */,
+				B7A2741713487DD70086F740 /* MultiDialViewController.h */,
+				B7A2741813487DD70086F740 /* MultiDialViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7A273B0134878D70086F740 /* Dial Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7A273E8134878D80086F740 /* Build configuration list for PBXNativeTarget "Dial Example" */;
+			buildPhases = (
+				B7A273AD134878D70086F740 /* Sources */,
+				B7A273AE134878D70086F740 /* Frameworks */,
+				B7A273AF134878D70086F740 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dial Example";
+			productName = "Dial Example";
+			productReference = B7A273B1134878D70086F740 /* Dial Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7A273D4134878D80086F740 /* Dial ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7A273EB134878D80086F740 /* Build configuration list for PBXNativeTarget "Dial ExampleTests" */;
+			buildPhases = (
+				B7A273D0134878D80086F740 /* Sources */,
+				B7A273D1134878D80086F740 /* Frameworks */,
+				B7A273D2134878D80086F740 /* Resources */,
+				B7A273D3134878D80086F740 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7A273DA134878D80086F740 /* PBXTargetDependency */,
+			);
+			name = "Dial ExampleTests";
+			productName = "Dial ExampleTests";
+			productReference = B7A273D5134878D80086F740 /* Dial ExampleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7A273A8134878D70086F740 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = unit9.com;
+			};
+			buildConfigurationList = B7A273AB134878D70086F740 /* Build configuration list for PBXProject "Dial Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B7A273A6134878D70086F740;
+			productRefGroup = B7A273B2134878D70086F740 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7A273B0134878D70086F740 /* Dial Example */,
+				B7A273D4134878D80086F740 /* Dial ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7A273AF134878D70086F740 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A273C0134878D70086F740 /* InfoPlist.strings in Resources */,
+				B7A273C9134878D80086F740 /* MainWindow.xib in Resources */,
+				B7A273CF134878D80086F740 /* Dial_ExampleViewController.xib in Resources */,
+				B7A2740013487D0B0086F740 /* Default.png in Resources */,
+				B7A2740B13487D2B0086F740 /* Default@2x.png in Resources */,
+				B7A2740D13487D310086F740 /* Icon@2x~iphone.png in Resources */,
+				B7A2740F13487D370086F740 /* Icon~iphone.png in Resources */,
+				B7245080134CF34D00A6146E /* bg@2x.png in Resources */,
+				B7245081134CF34D00A6146E /* overlay@2x.png in Resources */,
+				B7355A18134D2B3100E3CCE4 /* Digital-7.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A273D2134878D80086F740 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A273E0134878D80086F740 /* InfoPlist.strings in Resources */,
+				B7A273E3134878D80086F740 /* Dial_ExampleTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B7A273D3134878D80086F740 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7A273AD134878D70086F740 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A273C3134878D70086F740 /* main.m in Sources */,
+				B7A273C6134878D80086F740 /* Dial_ExampleAppDelegate.m in Sources */,
+				B7A273CC134878D80086F740 /* Dial_ExampleViewController.m in Sources */,
+				B7A2741913487DD70086F740 /* DialController.m in Sources */,
+				B7A2741A13487DD70086F740 /* GlowLabel.m in Sources */,
+				B7A2741B13487DD70086F740 /* MultiDialViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A273D0134878D80086F740 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A273E5134878D80086F740 /* Dial_ExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7A273DA134878D80086F740 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7A273B0134878D70086F740 /* Dial Example */;
+			targetProxy = B7A273D9134878D80086F740 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7A273BE134878D70086F740 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7A273BF134878D70086F740 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B7A273C7134878D80086F740 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7A273C8134878D80086F740 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		B7A273CD134878D80086F740 /* Dial_ExampleViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7A273CE134878D80086F740 /* en */,
+			);
+			name = Dial_ExampleViewController.xib;
+			sourceTree = "<group>";
+		};
+		B7A273DE134878D80086F740 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7A273DF134878D80086F740 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7A273E6134878D80086F740 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B7A273E7134878D80086F740 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		B7A273E9134878D80086F740 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dial Example/Dial Example-Prefix.pch";
+				INFOPLIST_FILE = "Dial Example/Dial Example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B7A273EA134878D80086F740 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dial Example/Dial Example-Prefix.pch";
+				INFOPLIST_FILE = "Dial Example/Dial Example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B7A273EC134878D80086F740 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Dial Example.app/Dial Example";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dial ExampleTests/Dial ExampleTests-Prefix.pch";
+				INFOPLIST_FILE = "Dial ExampleTests/Dial ExampleTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B7A273ED134878D80086F740 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Dial Example.app/Dial Example";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Dial ExampleTests/Dial ExampleTests-Prefix.pch";
+				INFOPLIST_FILE = "Dial ExampleTests/Dial ExampleTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7A273AB134878D70086F740 /* Build configuration list for PBXProject "Dial Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A273E6134878D80086F740 /* Debug */,
+				B7A273E7134878D80086F740 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7A273E8134878D80086F740 /* Build configuration list for PBXNativeTarget "Dial Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A273E9134878D80086F740 /* Debug */,
+				B7A273EA134878D80086F740 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7A273EB134878D80086F740 /* Build configuration list for PBXNativeTarget "Dial ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A273EC134878D80086F740 /* Debug */,
+				B7A273ED134878D80086F740 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7A273A8134878D70086F740 /* Project object */;
+}

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Dial ExampleTests' target in the 'Dial ExampleTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
