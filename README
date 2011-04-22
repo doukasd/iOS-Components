@@ -1,0 +1,8 @@
+Various iOS Components and Utility Classes (more coming soon, hopefully...)
+
+Controls
+- DialController: an infinite* spinning dial, populated with strings.
+- DoubleSlider: a UIControl like a UISlider, with 2 handles, useful for selecting a range of values.
+
+Utilities
+- DDURLParser: Parses Parameters in URLs.
