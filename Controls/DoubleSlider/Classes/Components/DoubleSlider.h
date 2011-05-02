@@ -12,6 +12,8 @@
 	float maxSelectedValue;
 	float minValue;
 	float maxValue;
+    BOOL latchMin;
+    BOOL latchMax;
 	
 	UIImageView *minHandle;
 	UIImageView *maxHandle;

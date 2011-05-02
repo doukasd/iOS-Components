@@ -20,6 +20,7 @@ static const CGFloat colors [] = {
 @interface DoubleSlider (PrivateMethods)
 - (void)updateValues;
 - (void)addToContext:(CGContextRef)context roundRect:(CGRect)rrect withRoundedCorner1:(BOOL)c1 corner2:(BOOL)c2 corner3:(BOOL)c3 corner4:(BOOL)c4 radius:(CGFloat)radius;
+- (void)updateHandleImages;
 @end
 
 
@@ -65,6 +66,8 @@ static const CGFloat colors [] = {
 		self.backgroundColor = [UIColor clearColor];
 		
 		//init
+        latchMin = NO;
+        latchMax = NO;
 		[self updateValues];
 	}
 	return self;
@@ -77,16 +80,29 @@ static const CGFloat colors [] = {
 
 #pragma mark Touch tracking
 
+-(BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    CGPoint touchPoint = [touch locationInView:self];
+    if ( CGRectContainsPoint(self.minHandle.frame, touchPoint) ) {
+		latchMin = YES;
+	}
+	else if ( CGRectContainsPoint(self.maxHandle.frame, touchPoint) ) {
+		latchMax = YES;
+	}
+    [self updateHandleImages];
+    return YES;
+}
+
 - (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
 	CGPoint touchPoint = [touch locationInView:self];
-	if ( CGRectContainsPoint(self.minHandle.frame, touchPoint) ) {
+	if ( latchMin || CGRectContainsPoint(self.minHandle.frame, touchPoint) ) {
 		if (touchPoint.x < self.maxHandle.center.x - kMinHandleDistance && touchPoint.x > 0.0) {
 			self.minHandle.center = CGPointMake(touchPoint.x, self.minHandle.center.y);
 			[self updateValues];
 		}
 	}
-	else if ( CGRectContainsPoint(self.maxHandle.frame, touchPoint) ) {
+	else if ( latchMax || CGRectContainsPoint(self.maxHandle.frame, touchPoint) ) {
 		if (touchPoint.x > self.minHandle.center.x + kMinHandleDistance && touchPoint.x < self.frame.size.width) {
 			self.maxHandle.center = CGPointMake(touchPoint.x, self.maxHandle.center.y);
 			[self updateValues];
@@ -94,9 +110,17 @@ static const CGFloat colors [] = {
 	}
 	// Send value changed alert
 	[self sendActionsForControlEvents:UIControlEventValueChanged];
+    
 	//redraw
 	[self setNeedsDisplay];
 	return YES;
+}
+
+-(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    latchMin = NO;
+    latchMax = NO;
+    [self updateHandleImages];
 }
 
 #pragma mark Custom Drawing
@@ -153,6 +177,12 @@ static const CGFloat colors [] = {
 
 
 #pragma mark Helper
+
+- (void)updateHandleImages
+{
+    self.minHandle.highlighted = latchMin;
+    self.maxHandle.highlighted = latchMax;
+}
 
 - (void)updateValues
 {
