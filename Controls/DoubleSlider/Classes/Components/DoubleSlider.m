@@ -54,7 +54,7 @@ static const CGFloat colors [] = {
 		}
         valueSpan = maxValue - minValue;
 		sliderBarHeight = height;
-        sliderBarWidth = self.frame.size.width / self.transform.a;
+        sliderBarWidth = self.frame.size.width / self.transform.a;  //calculate the actual bar width by dividing with the cos of the view's angle
 		
 		self.minHandle = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"handle.png"] highlightedImage:[UIImage imageNamed:@"handle_highlight.png"]] autorelease];
 		self.minHandle.center = CGPointMake(sliderBarWidth * 0.2, sliderBarHeight * 0.5);
