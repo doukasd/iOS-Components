@@ -37,12 +37,12 @@ static const CGFloat colors [] = {
 	[super dealloc];
 }
 
-
 #pragma mark Object initialization
 
 - (id) initWithFrame:(CGRect)aFrame minValue:(float)aMinValue maxValue:(float)aMaxValue barHeight:(float)height
 {
-	if (self = [super initWithFrame:aFrame])
+    self = [super initWithFrame:aFrame];
+    if (self)
 	{
 		if (aMinValue < aMaxValue) {
 			minValue = aMinValue;
@@ -52,14 +52,16 @@ static const CGFloat colors [] = {
 			minValue = aMaxValue;
 			maxValue = aMinValue;
 		}
+        valueSpan = maxValue - minValue;
 		sliderBarHeight = height;
+        sliderBarWidth = self.frame.size.width / self.transform.a;
 		
 		self.minHandle = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"handle.png"] highlightedImage:[UIImage imageNamed:@"handle_highlight.png"]] autorelease];
-		self.minHandle.center = CGPointMake(self.frame.size.width * 0.2, sliderBarHeight * 0.5);
+		self.minHandle.center = CGPointMake(sliderBarWidth * 0.2, sliderBarHeight * 0.5);
 		[self addSubview:self.minHandle];
 		
 		self.maxHandle = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"handle.png"] highlightedImage:[UIImage imageNamed:@"handle_highlight.png"]] autorelease];
-		self.maxHandle.center = CGPointMake(self.frame.size.width * 0.8, sliderBarHeight * 0.5);
+		self.maxHandle.center = CGPointMake(sliderBarWidth * 0.8, sliderBarHeight * 0.5);
 		[self addSubview:self.maxHandle];
 		
 		bgColor = CGColorRetain([UIColor darkGrayColor].CGColor);
@@ -75,7 +77,7 @@ static const CGFloat colors [] = {
 
 + (id) doubleSlider
 {
-	return [[[self alloc] initWithFrame:CGRectMake(0., 0., 300., 40.) minValue:1.0 maxValue:100.0 barHeight:10.0] autorelease];
+	return [[[self alloc] initWithFrame:CGRectMake(0., 0., 300., 40.) minValue:0.0 maxValue:100.0 barHeight:10.0] autorelease];
 }
 
 #pragma mark Touch tracking
@@ -103,7 +105,7 @@ static const CGFloat colors [] = {
 		}
 	}
 	else if ( latchMax || CGRectContainsPoint(self.maxHandle.frame, touchPoint) ) {
-		if (touchPoint.x > self.minHandle.center.x + kMinHandleDistance && touchPoint.x < self.frame.size.width) {
+		if (touchPoint.x > self.minHandle.center.x + kMinHandleDistance && touchPoint.x < sliderBarWidth) {
 			self.maxHandle.center = CGPointMake(touchPoint.x, self.maxHandle.center.y);
 			[self updateValues];
 		}
@@ -138,8 +140,8 @@ static const CGFloat colors [] = {
 	
 	CGRect rect1 = CGRectMake(0.0, 0.0, self.minHandle.center.x, sliderBarHeight);
 	CGRect rect2 = CGRectMake(self.minHandle.center.x, 0.0, self.maxHandle.center.x - self.minHandle.center.x, sliderBarHeight);
-	CGRect rect3 = CGRectMake(self.maxHandle.center.x, 0.0, self.frame.size.width - self.maxHandle.center.x, sliderBarHeight);
-	
+	CGRect rect3 = CGRectMake(self.maxHandle.center.x, 0.0, sliderBarWidth - self.maxHandle.center.x, sliderBarHeight);
+    	
     CGContextSaveGState(context);
 	
     CGPoint startPoint = CGPointMake(CGRectGetMidX(rect), CGRectGetMinY(rect));
@@ -186,9 +188,8 @@ static const CGFloat colors [] = {
 
 - (void)updateValues
 {
-	float span = maxValue - minValue; //FIX: this should be cached
-	self.minSelectedValue = minValue + self.minHandle.center.x / self.frame.size.width * span;
-	self.maxSelectedValue = minValue + self.maxHandle.center.x / self.frame.size.width * span;
+	self.minSelectedValue = minValue + self.minHandle.center.x / sliderBarWidth * valueSpan;
+	self.maxSelectedValue = minValue + self.maxHandle.center.x / sliderBarWidth * valueSpan;
 }
 
 @end

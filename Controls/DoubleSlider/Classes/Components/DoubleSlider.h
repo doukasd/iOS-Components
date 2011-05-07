@@ -12,6 +12,7 @@
 	float maxSelectedValue;
 	float minValue;
 	float maxValue;
+    float valueSpan;
     BOOL latchMin;
     BOOL latchMax;
 	
@@ -19,6 +20,7 @@
 	UIImageView *maxHandle;
 	
 	float sliderBarHeight;
+    float sliderBarWidth;
 	
 	CGColorRef bgColor;
 }
@@ -39,4 +41,5 @@
 Improvements:
  - initWithWidth instead of frame?
  - do custom drawing below an overlay layer
+ - add inner shadow to the background and shadow to handles in code
 */

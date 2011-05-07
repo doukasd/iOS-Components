@@ -23,7 +23,7 @@
 	//DoubleSlider setup
 	DoubleSlider *slider = [DoubleSlider doubleSlider];
 	[slider addTarget:self action:@selector(valueChangedForDoubleSlider:) forControlEvents:UIControlEventValueChanged];
-	slider.center = self.view.center;
+	slider.center = self.view.center; 
 	[self.view addSubview:slider];
 	
 	leftLabel = [[UILabel alloc] initWithFrame:CGRectOffset(slider.frame, 0, -slider.frame.size.height)];
@@ -37,6 +37,7 @@
 	[self.view addSubview:rightLabel];
 	
 	//get the initial values
+    //slider.transform = CGAffineTransformRotate(slider.transform, 90.0/180*M_PI);      //make it vertical
 	[self valueChangedForDoubleSlider:slider];
 }
 
