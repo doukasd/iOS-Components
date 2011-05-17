@@ -8,7 +8,8 @@
 
 #import "DoubleSlider.h"
 
-#define kMinHandleDistance		10.0
+#define kMinHandleDistance          10.0
+#define kBoundaryValueThreshold     0.01
 
 //create the gradient
 static const CGFloat colors [] = { 
@@ -189,7 +190,12 @@ static const CGFloat colors [] = {
 - (void)updateValues
 {
 	self.minSelectedValue = minValue + self.minHandle.center.x / sliderBarWidth * valueSpan;
-	self.maxSelectedValue = minValue + self.maxHandle.center.x / sliderBarWidth * valueSpan;
+    //snap to min value
+    if (self.minSelectedValue < minValue + kBoundaryValueThreshold * valueSpan) self.minSelectedValue = minValue;
+        
+    self.maxSelectedValue = minValue + self.maxHandle.center.x / sliderBarWidth * valueSpan;
+    //snap to max value
+    if (self.maxSelectedValue > maxValue - kBoundaryValueThreshold * valueSpan) self.maxSelectedValue = maxValue;
 }
 
 @end
