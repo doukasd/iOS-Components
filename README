@@ -4,5 +4,8 @@ Controls
 - DialController: an infinite* spinning dial, populated with strings.
 - DoubleSlider: a UIControl like a UISlider, with 2 handles, useful for selecting a range of values.
 
+Views
+- StyleLabel: a label that can be colored with a vertical gradient and have a stroke and shadow.
+
 Utilities
 - DDURLParser: Parses Parameters in URLs.
