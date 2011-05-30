@@ -8,10 +8,16 @@
 
 @interface StyleLabel : UILabel {
     NSArray *colors;
+    CGFloat shadowRadius;
+    CGSize  shadowOffset;
+    BOOL    hasShadow;
 }
 
 @property (nonatomic, retain) NSArray *colors;
 
+@property BOOL hasShadow;
+
 - (id)initWithText:(NSString *)aText gradientColors:(NSArray *)gradientColors;
+- (void)setShadowOffset:(CGSize)offset radius:(CGFloat)radius;
 
 @end

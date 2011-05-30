@@ -6,11 +6,8 @@
 #import "StyleLabel.h"
 #import "UIColor-Expanded.h"
 
-#define GLOW_OFFSET     CGSizeMake(1, 2)
-#define GLOW_RADIUS     4
-
 @interface StyleLabel (PrivateMethods)
-- (UIImage *)gradientImageWithColors:(NSArray *)colors;
+- (UIImage *)gradientImageWithColors:(NSArray *)colors size:(CGSize)size;
 - (void)redrawLabel;
 @end
 
@@ -27,6 +24,10 @@
 - (id)initWithText:(NSString *)aText gradientColors:(NSArray *)gradientColors {
     self = [super init];
     if (self) {
+        self.hasShadow = YES;
+        shadowRadius = 4;
+        shadowOffset = CGSizeMake(1, 2);
+        
         self.backgroundColor = [UIColor clearColor];
         self.colors = gradientColors;
         self.text = aText;
@@ -39,46 +40,48 @@
 - (void)redrawLabel {
     //calculate frame
     CGSize textSize = [self.text sizeWithFont:self.font];
-    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, textSize.width, textSize.height);
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, textSize.width + shadowRadius, textSize.height + shadowRadius);
     
     //draw gradient
     if (!CGRectEqualToRect(self.frame, CGRectZero)) {
-        self.textColor = [UIColor colorWithPatternImage:[self gradientImageWithColors:self.colors]];
+        self.textColor = [UIColor colorWithPatternImage:[self gradientImageWithColors:self.colors size:textSize]];
     }
 }
 
 #pragma mark Override setters
 
-- (void)setFont:(UIFont *)font {
-    //set font
-    [super setFont:font];
-    //re-create color gradient for the new size
-    [self redrawLabel];
-    //re-draw text
-    //[self setNeedsDisplay];
+- (void)setShadowOffset:(CGSize)offset radius:(CGFloat)radius {
+    shadowOffset = offset;
+    shadowRadius = radius;
+    self.hasShadow = YES;
+}
+
+- (BOOL)hasShadow {
+    return hasShadow;
+}
+
+- (void)setHasShadow:(BOOL)shadow {
+    hasShadow = shadow;
+    if(self.hasShadow) [self redrawLabel];
+    [self setNeedsDisplay];
 }
 
 - (void)setText:(NSString *)text {
     [super setText:text];
     [self redrawLabel];
-    //re-draw text
-    //self.frame = self.frame;
 }
-/*
-- (void)setFrame:(CGRect)frame {
+
+- (void)setFont:(UIFont *)font {
+    [super setFont:font];
     [self redrawLabel];
-    //then center it to the new frame - actually we are not allowing the frame to be set, this just moves the label
-    self.center = CGPointMake(frame.origin.x + frame.size.width * 0.5, frame.origin.y + frame.size.height * 0.5);
 }
-*/
+
 #pragma mark -
 
-- (UIImage *)gradientImageWithColors:(NSArray *)gradientColors
+- (UIImage *)gradientImageWithColors:(NSArray *)gradientColors size:(CGSize)size
 {
-    //get the size of the label
-    CGSize textSize = [self.text sizeWithFont:self.font];
-    CGFloat width = textSize.width;         // max 1024 due to Core Graphics limitations
-    CGFloat height = textSize.height;       // max 1024 due to Core Graphics limitations
+    CGFloat width = size.width;         // max 1024 due to Core Graphics limitations
+    CGFloat height = size.height;       // max 1024 due to Core Graphics limitations
     
     NSAssert(width <= 1024.0 && height <= 1024.0, @"Label dimensions should not exceed 1024 on any axis. Could work, but results might be unexpected");
         
@@ -134,19 +137,26 @@
     return  gradientImage;
 }
 
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+}
+
 - (void)drawTextInRect:(CGRect)rect
-{
+{    
+    [self redrawLabel];
+    
     CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    //draw shadow
+    if (self.hasShadow) {
+        CGContextSetShadowWithColor(context, shadowOffset, shadowRadius, [[UIColor blackColor] CGColor]); 
+    }
     
     //draw stroke
     //CGContextSetStrokeColorWithColor(context, [[UIColor blackColor] CGColor]);
-    CGContextSetTextDrawingMode (context, kCGTextFillStroke);
-    
-    //draw shadow
-    CGContextSetShadowWithColor(context, GLOW_OFFSET, GLOW_RADIUS, [[UIColor blackColor] CGColor]);    
+    //CGContextSetTextDrawingMode (context, kCGTextFillStroke);
 
 	[super drawTextInRect:rect];
-
 }
 
 @end
