@@ -79,6 +79,13 @@
     b5.tag = 5;
     [b5 addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:b5];
+    
+    UIButton *b6 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [b6 setTitle:@"toggle stroke" forState:UIControlStateNormal];
+    b6.frame = CGRectMake(5, 185, 110, 30);
+    b6.tag = 6;
+    [b6 addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:b6];
 }
 
 - (void)buttonPressed:(id)sender {
@@ -97,6 +104,9 @@
             break;
         case 5:
             styleLabel.hasShadow = !styleLabel.hasShadow;
+            break;
+        case 6:
+            styleLabel.hasStroke = !styleLabel.hasStroke;
             break;
         default:
             break;

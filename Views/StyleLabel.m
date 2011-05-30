@@ -18,12 +18,17 @@
 
 - (void)dealloc {
     self.colors = nil;
+    self.strokeColor = nil;
     [super dealloc];
 }
 
 - (id)initWithText:(NSString *)aText gradientColors:(NSArray *)gradientColors {
     self = [super init];
     if (self) {
+        //initialize common properties
+        self.hasStroke = NO;
+        self.strokeColor = [UIColor blackColor];
+        
         self.hasShadow = YES;
         shadowRadius = 4;
         shadowOffset = CGSizeMake(1, 2);
@@ -38,7 +43,7 @@
 }
 
 - (void)redrawLabel {
-    //calculate frame
+    //calculate and update frame
     CGSize textSize = [self.text sizeWithFont:self.font];
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, textSize.width + shadowRadius, textSize.height + shadowRadius);
     
@@ -48,12 +53,26 @@
     }
 }
 
-#pragma mark Override setters
+#pragma mark Overriden/custom setters/getters
 
-- (void)setShadowOffset:(CGSize)offset radius:(CGFloat)radius {
-    shadowOffset = offset;
-    shadowRadius = radius;
-    self.hasShadow = YES;
+- (BOOL)hasStroke {
+    return hasStroke;
+}
+
+- (void)setHasStroke:(BOOL)stroke {
+    hasStroke = stroke;
+    [self setNeedsDisplay];
+}
+
+- (UIColor *)strokeColor {
+    return strokeColor;
+}
+
+- (void)setStrokeColor:(UIColor *)color {
+    [strokeColor release];
+    strokeColor = [color retain];
+    //enable/disable stroke
+    self.hasStroke = (strokeColor == nil);
 }
 
 - (BOOL)hasShadow {
@@ -66,6 +85,13 @@
     [self setNeedsDisplay];
 }
 
+- (void)setShadowOffset:(CGSize)offset radius:(CGFloat)radius {
+    shadowOffset = offset;
+    shadowRadius = radius;
+    //enable shadow
+    self.hasShadow = YES;
+}
+
 - (void)setText:(NSString *)text {
     [super setText:text];
     [self redrawLabel];
@@ -74,6 +100,18 @@
 - (void)setFont:(UIFont *)font {
     [super setFont:font];
     [self redrawLabel];
+}
+
+- (void)setFrame:(CGRect)aFrame {
+    //calculate and update frame
+    CGSize textSize = [self.text sizeWithFont:self.font];
+    CGRect frame = CGRectMake(aFrame.origin.x, aFrame.origin.y, textSize.width + shadowRadius, textSize.height + shadowRadius);
+    [super setFrame:frame];
+    
+    //draw gradient
+    if (!CGRectEqualToRect(self.frame, CGRectZero)) {
+        self.textColor = [UIColor colorWithPatternImage:[self gradientImageWithColors:self.colors size:textSize]];
+    }
 }
 
 #pragma mark -
@@ -137,25 +175,19 @@
     return  gradientImage;
 }
 
-- (void)drawRect:(CGRect)rect {
-    [super drawRect:rect];
-}
-
 - (void)drawTextInRect:(CGRect)rect
 {    
-    [self redrawLabel];
-    
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     //draw shadow
-    if (self.hasShadow) {
-        CGContextSetShadowWithColor(context, shadowOffset, shadowRadius, [[UIColor blackColor] CGColor]); 
-    }
+    if (self.hasShadow) CGContextSetShadowWithColor(context, shadowOffset, shadowRadius, [[UIColor blackColor] CGColor]); 
     
     //draw stroke
-    //CGContextSetStrokeColorWithColor(context, [[UIColor blackColor] CGColor]);
-    //CGContextSetTextDrawingMode (context, kCGTextFillStroke);
-
+    if (self.hasStroke) {
+        CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0);
+        CGContextSetTextDrawingMode(context, kCGTextFillStroke);
+    }
+    
 	[super drawTextInRect:rect];
 }
 
