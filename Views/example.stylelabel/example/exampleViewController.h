@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class StyleLabel;
+
 @interface exampleViewController : UIViewController {
-    
+    StyleLabel *styleLabel;
 }
 
 @end

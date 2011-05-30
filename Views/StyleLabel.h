@@ -7,7 +7,11 @@
 
 
 @interface StyleLabel : UILabel {
-    BOOL selected;
+    NSArray *colors;
 }
+
+@property (nonatomic, retain) NSArray *colors;
+
+- (id)initWithText:(NSString *)aText gradientColors:(NSArray *)gradientColors;
 
 @end
