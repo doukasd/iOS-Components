@@ -94,7 +94,7 @@
             styleLabel.font = [UIFont boldSystemFontOfSize:20 + arc4random() % 20];
             break;
         case 2:
-            styleLabel.text = (arc4random() % 2 > 0) ? @"Alternate text: 汉语/漢語" : @"Simple Τέξτ";
+            styleLabel.text = (arc4random() % 2 > 0) ? @"The big brown Φόξ" : @"Plain English Text";
             break;
         case 3:
             styleLabel.frame = CGRectMake(0, 200 + arc4random() % 100, 280, 100);

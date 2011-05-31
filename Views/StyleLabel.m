@@ -9,6 +9,7 @@
 @interface StyleLabel (PrivateMethods)
 - (UIImage *)gradientImageWithColors:(NSArray *)colors size:(CGSize)size;
 - (void)redrawLabel;
+- (void)resetGradient;
 @end
 
 
@@ -45,11 +46,15 @@
 - (void)redrawLabel {
     //calculate and update frame
     CGSize textSize = [self.text sizeWithFont:self.font];
-    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, textSize.width + shadowRadius, textSize.height + shadowRadius);
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, textSize.width + shadowRadius + shadowOffset.width, textSize.height + shadowRadius + shadowOffset.height);
     
     //draw gradient
+    [self resetGradient];
+}
+
+- (void)resetGradient {
     if (!CGRectEqualToRect(self.frame, CGRectZero)) {
-        self.textColor = [UIColor colorWithPatternImage:[self gradientImageWithColors:self.colors size:textSize]];
+        self.textColor = [UIColor colorWithPatternImage:[self gradientImageWithColors:self.colors size:self.frame.size]];
     }
 }
 
@@ -105,13 +110,11 @@
 - (void)setFrame:(CGRect)aFrame {
     //calculate and update frame
     CGSize textSize = [self.text sizeWithFont:self.font];
-    CGRect frame = CGRectMake(aFrame.origin.x, aFrame.origin.y, textSize.width + shadowRadius, textSize.height + shadowRadius);
+    CGRect frame = CGRectMake(aFrame.origin.x, aFrame.origin.y, textSize.width + shadowRadius + shadowOffset.width, textSize.height + shadowRadius + shadowOffset.height);
     [super setFrame:frame];
     
     //draw gradient
-    if (!CGRectEqualToRect(self.frame, CGRectZero)) {
-        self.textColor = [UIColor colorWithPatternImage:[self gradientImageWithColors:self.colors size:textSize]];
-    }
+    [self resetGradient];
 }
 
 #pragma mark -
