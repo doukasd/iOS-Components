@@ -38,6 +38,9 @@
 	
 	//get the initial values
     //slider.transform = CGAffineTransformRotate(slider.transform, 90.0/180*M_PI);      //make it vertical
+    //dynamically set the slider positions
+    //[slider moveSlidersToPosition:[NSNumber numberWithInt:5] : [NSNumber numberWithInt:77]];
+
 	[self valueChangedForDoubleSlider:slider];
 }
 
