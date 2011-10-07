@@ -7,7 +7,7 @@
 
 #import "TallyLabel.h"
 
-#define kTimerInterval      0.03f
+#define kTimerInterval      0.035f
 
 
 @interface TallyLabel ()
