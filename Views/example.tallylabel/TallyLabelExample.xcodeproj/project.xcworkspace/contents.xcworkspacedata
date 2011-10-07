@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CountingLabelExample.xcodeproj">
+      location = "self:TallyLabelExample.xcodeproj">
    </FileRef>
 </Workspace>

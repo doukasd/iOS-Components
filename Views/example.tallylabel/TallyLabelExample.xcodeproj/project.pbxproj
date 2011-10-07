@@ -10,32 +10,33 @@
 		B7358B851433D36700B7EAFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7358B841433D36700B7EAFF /* UIKit.framework */; };
 		B7358B871433D36700B7EAFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7358B861433D36700B7EAFF /* Foundation.framework */; };
 		B7358B891433D36700B7EAFF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7358B881433D36700B7EAFF /* CoreGraphics.framework */; };
-		B7358B8F1433D36700B7EAFF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7358B8D1433D36700B7EAFF /* InfoPlist.strings */; };
-		B7358B911433D36700B7EAFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7358B901433D36700B7EAFF /* main.m */; };
-		B7358B951433D36700B7EAFF /* CountingLabelExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7358B941433D36700B7EAFF /* CountingLabelExampleAppDelegate.m */; };
-		B7358B981433D36700B7EAFF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7358B961433D36700B7EAFF /* MainWindow.xib */; };
-		B7358B9B1433D36700B7EAFF /* CountingLabelExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7358B9A1433D36700B7EAFF /* CountingLabelExampleViewController.m */; };
-		B7358B9E1433D36700B7EAFF /* CountingLabelExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7358B9C1433D36700B7EAFF /* CountingLabelExampleViewController.xib */; };
-		B7E6CEFA14354B4900DC8AD2 /* CountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E6CEF914354B4900DC8AD2 /* CountingLabel.m */; };
+		B795DCF6143E6FDA0034C624 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B795DCE9143E6FDA0034C624 /* InfoPlist.strings */; };
+		B795DCF7143E6FDA0034C624 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B795DCEB143E6FDA0034C624 /* MainWindow.xib */; };
+		B795DCF8143E6FDA0034C624 /* TallyLabelExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B795DCED143E6FDA0034C624 /* TallyLabelExampleViewController.xib */; };
+		B795DCF9143E6FDA0034C624 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B795DCEF143E6FDA0034C624 /* main.m */; };
+		B795DCFA143E6FDA0034C624 /* TallyLabelExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B795DCF0143E6FDA0034C624 /* TallyLabelExample-Info.plist */; };
+		B795DCFB143E6FDA0034C624 /* TallyLabelExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B795DCF3143E6FDA0034C624 /* TallyLabelExampleAppDelegate.m */; };
+		B795DCFC143E6FDA0034C624 /* TallyLabelExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B795DCF5143E6FDA0034C624 /* TallyLabelExampleViewController.m */; };
+		B7E6CEFA14354B4900DC8AD2 /* TallyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E6CEF914354B4900DC8AD2 /* TallyLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B7358B801433D36700B7EAFF /* CountingLabelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountingLabelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7358B801433D36700B7EAFF /* TallyLabelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TallyLabelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7358B841433D36700B7EAFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B7358B861433D36700B7EAFF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B7358B881433D36700B7EAFF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B7358B8C1433D36700B7EAFF /* CountingLabelExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CountingLabelExample-Info.plist"; sourceTree = "<group>"; };
-		B7358B8E1433D36700B7EAFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B7358B901433D36700B7EAFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B7358B921433D36700B7EAFF /* CountingLabelExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountingLabelExample-Prefix.pch"; sourceTree = "<group>"; };
-		B7358B931433D36700B7EAFF /* CountingLabelExampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountingLabelExampleAppDelegate.h; sourceTree = "<group>"; };
-		B7358B941433D36700B7EAFF /* CountingLabelExampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountingLabelExampleAppDelegate.m; sourceTree = "<group>"; };
-		B7358B971433D36700B7EAFF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		B7358B991433D36700B7EAFF /* CountingLabelExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountingLabelExampleViewController.h; sourceTree = "<group>"; };
-		B7358B9A1433D36700B7EAFF /* CountingLabelExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountingLabelExampleViewController.m; sourceTree = "<group>"; };
-		B7358B9D1433D36700B7EAFF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CountingLabelExampleViewController.xib; sourceTree = "<group>"; };
-		B7E6CEF814354B4900DC8AD2 /* CountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountingLabel.h; path = ../CountingLabel.h; sourceTree = "<group>"; };
-		B7E6CEF914354B4900DC8AD2 /* CountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountingLabel.m; path = ../CountingLabel.m; sourceTree = "<group>"; };
+		B795DCEA143E6FDA0034C624 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B795DCEC143E6FDA0034C624 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B795DCEE143E6FDA0034C624 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TallyLabelExampleViewController.xib; sourceTree = "<group>"; };
+		B795DCEF143E6FDA0034C624 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B795DCF0143E6FDA0034C624 /* TallyLabelExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TallyLabelExample-Info.plist"; sourceTree = "<group>"; };
+		B795DCF1143E6FDA0034C624 /* TallyLabelExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TallyLabelExample-Prefix.pch"; sourceTree = "<group>"; };
+		B795DCF2143E6FDA0034C624 /* TallyLabelExampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TallyLabelExampleAppDelegate.h; sourceTree = "<group>"; };
+		B795DCF3143E6FDA0034C624 /* TallyLabelExampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TallyLabelExampleAppDelegate.m; sourceTree = "<group>"; };
+		B795DCF4143E6FDA0034C624 /* TallyLabelExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TallyLabelExampleViewController.h; sourceTree = "<group>"; };
+		B795DCF5143E6FDA0034C624 /* TallyLabelExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TallyLabelExampleViewController.m; sourceTree = "<group>"; };
+		B7E6CEF814354B4900DC8AD2 /* TallyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TallyLabel.h; path = ../TallyLabel.h; sourceTree = "<group>"; };
+		B7E6CEF914354B4900DC8AD2 /* TallyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TallyLabel.m; path = ../TallyLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +56,8 @@
 		B7358B751433D36600B7EAFF = {
 			isa = PBXGroup;
 			children = (
-				B7358BA71433D39400B7EAFF /* CountingLabel */,
-				B7358B8A1433D36700B7EAFF /* CountingLabelExample */,
+				B7358BA71433D39400B7EAFF /* TallyLabel */,
+				B795DCE8143E6FDA0034C624 /* example */,
 				B7358B831433D36700B7EAFF /* Frameworks */,
 				B7358B811433D36700B7EAFF /* Products */,
 			);
@@ -65,7 +66,7 @@
 		B7358B811433D36700B7EAFF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B7358B801433D36700B7EAFF /* CountingLabelExample.app */,
+				B7358B801433D36700B7EAFF /* TallyLabelExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,46 +81,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B7358B8A1433D36700B7EAFF /* CountingLabelExample */ = {
+		B7358BA71433D39400B7EAFF /* TallyLabel */ = {
 			isa = PBXGroup;
 			children = (
-				B7358B931433D36700B7EAFF /* CountingLabelExampleAppDelegate.h */,
-				B7358B941433D36700B7EAFF /* CountingLabelExampleAppDelegate.m */,
-				B7358B961433D36700B7EAFF /* MainWindow.xib */,
-				B7358B991433D36700B7EAFF /* CountingLabelExampleViewController.h */,
-				B7358B9A1433D36700B7EAFF /* CountingLabelExampleViewController.m */,
-				B7358B9C1433D36700B7EAFF /* CountingLabelExampleViewController.xib */,
-				B7358B8B1433D36700B7EAFF /* Supporting Files */,
+				B7E6CEF814354B4900DC8AD2 /* TallyLabel.h */,
+				B7E6CEF914354B4900DC8AD2 /* TallyLabel.m */,
 			);
-			path = CountingLabelExample;
+			name = TallyLabel;
 			sourceTree = "<group>";
 		};
-		B7358B8B1433D36700B7EAFF /* Supporting Files */ = {
+		B795DCE8143E6FDA0034C624 /* example */ = {
 			isa = PBXGroup;
 			children = (
-				B7358B8C1433D36700B7EAFF /* CountingLabelExample-Info.plist */,
-				B7358B8D1433D36700B7EAFF /* InfoPlist.strings */,
-				B7358B901433D36700B7EAFF /* main.m */,
-				B7358B921433D36700B7EAFF /* CountingLabelExample-Prefix.pch */,
+				B795DCE9143E6FDA0034C624 /* InfoPlist.strings */,
+				B795DCEB143E6FDA0034C624 /* MainWindow.xib */,
+				B795DCED143E6FDA0034C624 /* TallyLabelExampleViewController.xib */,
+				B795DCEF143E6FDA0034C624 /* main.m */,
+				B795DCF0143E6FDA0034C624 /* TallyLabelExample-Info.plist */,
+				B795DCF1143E6FDA0034C624 /* TallyLabelExample-Prefix.pch */,
+				B795DCF2143E6FDA0034C624 /* TallyLabelExampleAppDelegate.h */,
+				B795DCF3143E6FDA0034C624 /* TallyLabelExampleAppDelegate.m */,
+				B795DCF4143E6FDA0034C624 /* TallyLabelExampleViewController.h */,
+				B795DCF5143E6FDA0034C624 /* TallyLabelExampleViewController.m */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B7358BA71433D39400B7EAFF /* CountingLabel */ = {
-			isa = PBXGroup;
-			children = (
-				B7E6CEF814354B4900DC8AD2 /* CountingLabel.h */,
-				B7E6CEF914354B4900DC8AD2 /* CountingLabel.m */,
-			);
-			name = CountingLabel;
+			path = example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B7358B7F1433D36600B7EAFF /* CountingLabelExample */ = {
+		B7358B7F1433D36600B7EAFF /* TallyLabelExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7358BA11433D36700B7EAFF /* Build configuration list for PBXNativeTarget "CountingLabelExample" */;
+			buildConfigurationList = B7358BA11433D36700B7EAFF /* Build configuration list for PBXNativeTarget "TallyLabelExample" */;
 			buildPhases = (
 				B7358B7C1433D36600B7EAFF /* Sources */,
 				B7358B7D1433D36600B7EAFF /* Frameworks */,
@@ -129,9 +122,9 @@
 			);
 			dependencies = (
 			);
-			name = CountingLabelExample;
+			name = TallyLabelExample;
 			productName = CountingLabelExample;
-			productReference = B7358B801433D36700B7EAFF /* CountingLabelExample.app */;
+			productReference = B7358B801433D36700B7EAFF /* TallyLabelExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -142,7 +135,7 @@
 			attributes = {
 				ORGANIZATIONNAME = unit9.com;
 			};
-			buildConfigurationList = B7358B7A1433D36600B7EAFF /* Build configuration list for PBXProject "CountingLabelExample" */;
+			buildConfigurationList = B7358B7A1433D36600B7EAFF /* Build configuration list for PBXProject "TallyLabelExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -154,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B7358B7F1433D36600B7EAFF /* CountingLabelExample */,
+				B7358B7F1433D36600B7EAFF /* TallyLabelExample */,
 			);
 		};
 /* End PBXProject section */
@@ -164,9 +157,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7358B8F1433D36700B7EAFF /* InfoPlist.strings in Resources */,
-				B7358B981433D36700B7EAFF /* MainWindow.xib in Resources */,
-				B7358B9E1433D36700B7EAFF /* CountingLabelExampleViewController.xib in Resources */,
+				B795DCF6143E6FDA0034C624 /* InfoPlist.strings in Resources */,
+				B795DCF7143E6FDA0034C624 /* MainWindow.xib in Resources */,
+				B795DCF8143E6FDA0034C624 /* TallyLabelExampleViewController.xib in Resources */,
+				B795DCFA143E6FDA0034C624 /* TallyLabelExample-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,38 +171,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7358B911433D36700B7EAFF /* main.m in Sources */,
-				B7358B951433D36700B7EAFF /* CountingLabelExampleAppDelegate.m in Sources */,
-				B7358B9B1433D36700B7EAFF /* CountingLabelExampleViewController.m in Sources */,
-				B7E6CEFA14354B4900DC8AD2 /* CountingLabel.m in Sources */,
+				B7E6CEFA14354B4900DC8AD2 /* TallyLabel.m in Sources */,
+				B795DCF9143E6FDA0034C624 /* main.m in Sources */,
+				B795DCFB143E6FDA0034C624 /* TallyLabelExampleAppDelegate.m in Sources */,
+				B795DCFC143E6FDA0034C624 /* TallyLabelExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B7358B8D1433D36700B7EAFF /* InfoPlist.strings */ = {
+		B795DCE9143E6FDA0034C624 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B7358B8E1433D36700B7EAFF /* en */,
+				B795DCEA143E6FDA0034C624 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		B7358B961433D36700B7EAFF /* MainWindow.xib */ = {
+		B795DCEB143E6FDA0034C624 /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B7358B971433D36700B7EAFF /* en */,
+				B795DCEC143E6FDA0034C624 /* en */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		B7358B9C1433D36700B7EAFF /* CountingLabelExampleViewController.xib */ = {
+		B795DCED143E6FDA0034C624 /* TallyLabelExampleViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B7358B9D1433D36700B7EAFF /* en */,
+				B795DCEE143E6FDA0034C624 /* en */,
 			);
-			name = CountingLabelExampleViewController.xib;
+			name = TallyLabelExampleViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -261,9 +255,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CountingLabelExample/CountingLabelExample-Prefix.pch";
-				INFOPLIST_FILE = "CountingLabelExample/CountingLabelExample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "example/TallyLabelExample-Prefix.pch";
+				INFOPLIST_FILE = "example/TallyLabelExample-Info.plist";
+				PRODUCT_NAME = TallyLabelExample;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -272,9 +266,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CountingLabelExample/CountingLabelExample-Prefix.pch";
-				INFOPLIST_FILE = "CountingLabelExample/CountingLabelExample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "example/TallyLabelExample-Prefix.pch";
+				INFOPLIST_FILE = "example/TallyLabelExample-Info.plist";
+				PRODUCT_NAME = TallyLabelExample;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -282,7 +276,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B7358B7A1433D36600B7EAFF /* Build configuration list for PBXProject "CountingLabelExample" */ = {
+		B7358B7A1433D36600B7EAFF /* Build configuration list for PBXProject "TallyLabelExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B7358B9F1433D36700B7EAFF /* Debug */,
@@ -291,7 +285,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7358BA11433D36700B7EAFF /* Build configuration list for PBXNativeTarget "CountingLabelExample" */ = {
+		B7358BA11433D36700B7EAFF /* Build configuration list for PBXNativeTarget "TallyLabelExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B7358BA21433D36700B7EAFF /* Debug */,

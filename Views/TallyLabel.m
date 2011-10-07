@@ -1,23 +1,23 @@
 //
-//  CountingLabel.m
+//  TallyLabel.m
 //
 //  Created by Dimitris Doukas on 05/05/2011.
-//  Copyright 2011 unit9.com. All rights reserved.
+//  Copyright 2011 doukasd.com. All rights reserved.
 //
 
-#import "CountingLabel.h"
+#import "TallyLabel.h"
 
 #define kTimerInterval      0.03f
 
 
-@interface CountingLabel ()
+@interface TallyLabel ()
 @property (nonatomic, retain) NSTimer *timer;
 - (void)commonInit;
-- (void)countTo:(CGFloat)number;
+- (void)tallyTo:(CGFloat)number;
 @end
 
 
-@implementation CountingLabel
+@implementation TallyLabel
 
 @synthesize timer, stringFormat;
 @synthesize animationDuration;
@@ -74,6 +74,7 @@
 - (void)timerLoop:(NSTimer *)aTimer {
     //update current value
     currentTextNumber += currentStep;
+    
     //check if the timer needs to be disabled
     if ( (currentStep >= 0 && currentTextNumber >= textNumber) || (currentStep < 0 && currentTextNumber <= textNumber) ) {
         currentTextNumber = textNumber;
@@ -89,7 +90,7 @@
     free(arg);
 }
 
-- (void)countTo:(CGFloat)number {
+- (void)tallyTo:(CGFloat)number {
     textNumber = number;
     currentStep = (textNumber - currentTextNumber)*kTimerInterval/self.animationDuration;
     [self startTimer];
@@ -99,8 +100,8 @@
 
 - (void)setText:(NSString *)text
 {
-    //override this method to get the value and start counting
-    [self countTo:[text floatValue]];
+    //override this method to get the value and start tallying
+    [self tallyTo:[text intValue]];
 }
 
 @end
