@@ -1,16 +1,16 @@
 //
-//  CountingLabelExampleAppDelegate.m
-//  CountingLabelExample
+//  TallyLabelExampleAppDelegate.m
+//  TallyLabelExample
 //
 //  Created by Dimitris Doukas on 28/09/2011.
-//  Copyright 2011 unit9.com. All rights reserved.
+//  Copyright 2011 doukasd.com. All rights reserved.
 //
 
-#import "CountingLabelExampleAppDelegate.h"
+#import "TallyLabelExampleAppDelegate.h"
 
-#import "CountingLabelExampleViewController.h"
+#import "TallyLabelExampleViewController.h"
 
-@implementation CountingLabelExampleAppDelegate
+@implementation TallyLabelExampleAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;

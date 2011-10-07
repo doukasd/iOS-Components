@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B7358B7F1433D36600B7EAFF"
-               BuildableName = "CountingLabelExample.app"
-               BlueprintName = "CountingLabelExample"
-               ReferencedContainer = "container:CountingLabelExample.xcodeproj">
+               BuildableName = "TallyLabelExample.app"
+               BlueprintName = "TallyLabelExample"
+               ReferencedContainer = "container:TallyLabelExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -39,9 +39,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B7358B7F1433D36600B7EAFF"
-            BuildableName = "CountingLabelExample.app"
-            BlueprintName = "CountingLabelExample"
-            ReferencedContainer = "container:CountingLabelExample.xcodeproj">
+            BuildableName = "TallyLabelExample.app"
+            BlueprintName = "TallyLabelExample"
+            ReferencedContainer = "container:TallyLabelExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B7358B7F1433D36600B7EAFF"
-            BuildableName = "CountingLabelExample.app"
-            BlueprintName = "CountingLabelExample"
-            ReferencedContainer = "container:CountingLabelExample.xcodeproj">
+            BuildableName = "TallyLabelExample.app"
+            BlueprintName = "TallyLabelExample"
+            ReferencedContainer = "container:TallyLabelExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
