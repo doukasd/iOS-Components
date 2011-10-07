@@ -1041,8 +1041,8 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>339641920.70711201</real>
-		<string>{0, 941}</string>
+		<real>339642186.11807698</real>
+		<string>{0, 960}</string>
 		<string>{183, 0}</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
@@ -1086,7 +1086,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {1140, 707}}</string>
+		<string>{{0, 0}, {1140, 729}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -10820,8 +10820,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339641920.70427603</real>
-		<string>{0, 941}</string>
+		<real>339642186.11563802</real>
+		<string>{0, 960}</string>
 		<string>{183, 0}</string>
 		<dict>
 			<key>$class</key>
@@ -12280,7 +12280,7 @@
 				<integer>979</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>339641867.75263399</real>
+			<real>339641945.18851697</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -12291,7 +12291,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 01:57</string>
+		<string>Today at 01:59</string>
 		<integer>234</integer>
 		<string>TallyLabelExample</string>
 		<dict>
