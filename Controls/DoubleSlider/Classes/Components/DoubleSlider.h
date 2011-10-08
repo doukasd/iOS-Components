@@ -33,6 +33,7 @@
 
 - (id) initWithFrame:(CGRect)aFrame minValue:(float)minValue maxValue:(float)maxValue barHeight:(float)height;
 + (id) doubleSlider;
+- (void) moveSlidersToPosition:(NSNumber *)leftSlider: (NSNumber *)rightSlider;
 
 @end
 

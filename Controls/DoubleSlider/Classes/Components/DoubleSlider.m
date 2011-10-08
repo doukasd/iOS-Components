@@ -76,6 +76,14 @@ static const CGFloat colors [] = {
 	return self;
 }
 
+- (void) moveSlidersToPosition:(NSNumber *)leftSlider: (NSNumber *)rightSlider {    
+    self.minHandle.center = CGPointMake(sliderBarWidth * ((float)[leftSlider intValue] / 100), sliderBarHeight * 0.5);
+    self.maxHandle.center = CGPointMake(sliderBarWidth * ((float)[rightSlider intValue] / 100), sliderBarHeight * 0.5);
+    self.minSelectedValue = [leftSlider floatValue];
+    self.maxSelectedValue = [rightSlider floatValue];
+}
+
+
 + (id) doubleSlider
 {
 	return [[[self alloc] initWithFrame:CGRectMake(0., 0., 300., 40.) minValue:0.0 maxValue:100.0 barHeight:10.0] autorelease];
