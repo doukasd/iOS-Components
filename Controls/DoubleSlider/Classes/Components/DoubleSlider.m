@@ -10,6 +10,7 @@
 
 #define kMinHandleDistance          10.0
 #define kBoundaryValueThreshold     0.01
+#define kMovingAnimationDuration    0.3
 
 //create the gradient
 static const CGFloat colors [] = { 
@@ -76,11 +77,20 @@ static const CGFloat colors [] = {
 	return self;
 }
 
-- (void) moveSlidersToPosition:(NSNumber *)leftSlider: (NSNumber *)rightSlider {    
-    self.minHandle.center = CGPointMake(sliderBarWidth * ((float)[leftSlider intValue] / 100), sliderBarHeight * 0.5);
-    self.maxHandle.center = CGPointMake(sliderBarWidth * ((float)[rightSlider intValue] / 100), sliderBarHeight * 0.5);
-    self.minSelectedValue = [leftSlider floatValue];
-    self.maxSelectedValue = [rightSlider floatValue];
+- (void) moveSlidersToPosition:(NSNumber *)leftSlider: (NSNumber *)rightSlider animated:(BOOL)animated {
+    CGFloat duration = animated ? kMovingAnimationDuration : 0.0;
+    [UIView transitionWithView:self duration:duration options:UIViewAnimationOptionCurveLinear
+                    animations:^(void){
+                        self.minHandle.center = CGPointMake(sliderBarWidth * ((float)[leftSlider intValue] / 100), sliderBarHeight * 0.5);
+                        self.maxHandle.center = CGPointMake(sliderBarWidth * ((float)[rightSlider intValue] / 100), sliderBarHeight * 0.5);
+                        [self updateValues];
+                        //force redraw
+                        [self setNeedsDisplay];
+                        //notify listeners
+                        [self sendActionsForControlEvents:UIControlEventValueChanged];
+                    }
+                    completion:^(BOOL finished) {
+                    }];
 }
 
 
