@@ -1,12 +1,15 @@
-Various iOS Components and Utility Classes (more coming soon, hopefully...)
+Various iOS Components and Utility Classes
 
+CONTENTS
 Controls
 - DialController: an infinite* spinning dial, populated with strings.
 - DoubleSlider: a UIControl like a UISlider, with 2 handles, useful for selecting a range of values.
-
 Views
 - StyleLabel: a label that can be colored with a vertical gradient and have a stroke and shadow.
 - Tally Label: A drop-in replacement (and subclass of) UILabel that counts up/down to a number animated. Useful for scores in games that have to tally up. You can set the format needed even using the default text of the label if it's created in IB (for example "%08d points") and it will respect that when showing the text. Just pass it the int you want displayed, using the normal UILabel method -setText:.
-
 Utilities
 - DDURLParser: Parses Parameters in URLs.
+
+
+LICENSE
+The content of this repository is licensed under the terms of the Apache License, Version 2.0.
