@@ -6,6 +6,8 @@
 //  Copyright 2010 doukasd.com. All rights reserved.
 //
 
+#import "DDURLParser.h"
+
 @implementation DDURLParser
 @synthesize variables;
 
