@@ -1,10 +1,12 @@
 //
 //  DDURLParser.m
-//  
+//
 //
 //  Created by Dimitris Doukas on 09/02/2010.
 //  Copyright 2010 doukasd.com. All rights reserved.
 //
+
+#import "DDURLParser.h"
 
 @implementation DDURLParser
 @synthesize variables;
@@ -22,25 +24,19 @@
         while ([scanner scanUpToString:@"&" intoString:&tempString]) {
             [vars addObject:[tempString copy]];
         }
-        self.variables = vars;
-        [vars release];
+        variables = vars;
     }
     return self;
 }
 
 - (NSString *)valueForVariable:(NSString *)varName {
-    for (NSString *var in self.variables) {
+    for (NSString *var in variables) {
         if ([var length] > [varName length]+1 && [[var substringWithRange:NSMakeRange(0, [varName length]+1)] isEqualToString:[varName stringByAppendingString:@"="]]) {
             NSString *varValue = [var substringFromIndex:[varName length]+1];
             return varValue;
         }
     }
     return nil;
-}
-
-- (void) dealloc{
-    self.variables = nil;
-    [super dealloc];
 }
 
 @end
